@@ -9,21 +9,23 @@ SQL for creating your database tables
 Insert statements to populate your tables with
 
 ## Objective
-In an object-oriented language of your choosing, create an api that will accept a US state abbreviation as input and return information regarding jobs.
+In an object-oriented language of your choosing, create an api that will accept a US state abbreviation as input and return information regarding votes.
 The GET request should return the following stats.
 
-* **State name**
-* **Total number of jobs**
-* **Total number of jobs open**
-* **Total number of jobs filled**
-* **Number of new jobs w/in the last 7 days**
-* **Total jobs available per 100k** (i.e. NC has a population of 10,500,000 and roughly 564,000 cases of COVID. That would be ~5,371/100k cases.
-* **Total nubmer of deaths per 100k** (similar to above)
+* **Full state name**
+* **Total number of registered voters**
+* **Total number of voters (ballots cast)**
+* **Voter turnout** (percentage of registered voters who cast a ballot)
+* **Number of valid votes**
+* **Number of invalid votes**
+* **Percentage of mail-in votes**
+* **Percentage of in-person votes**
+* **Percentage of early votes**
 
-Additionally there should be a POST request that accepts input for new cases.
-* State Abbreviation
+Additionally there should be a POST request that accepts input for new votes.
+* Define what the input should be for this request
 
-Finally, we need a PUT request that will allow us to update a particular case of COVID as a death
+Finally, we need a PUT request that will allow us to update a particular vote to mark it invalid
 
 ## Submission
 Create a fork of this repository to complete your work in. Once done submit a pull request containing
@@ -31,3 +33,5 @@ Create a fork of this repository to complete your work in. Once done submit a pu
 2. dataset.sql
 3. README.md with instructions on how to setup and run your code. This should include details for how to do your GET/POST requests. 
 4. The complete codeset
+
+**Note:: You do not need to do all 50 states. Just a few to allow us to test the api should suffice. Also it does not have to use actual voter data. We are mainly looking for the schema, coding and logic. 
