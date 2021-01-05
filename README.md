@@ -34,4 +34,4 @@ Create a fork of this repository to complete your work in. Once done submit a pu
 3. README.md with instructions on how to setup and run your code. This should include details for how to do your GET/POST requests. 
 4. The complete codeset
 
-**Note:: You do not need to do all 50 states. Just a few to allow us to test the api should suffice. Also it does not have to use actual voter data. We are mainly looking for the schema, coding and logic. 
+**Note:: You do not need to do all 50 states. Just a few to allow us to test the api should suffice. Also it does not have to use actual voter data. We are mainly looking for the schema, coding and logic.** 
