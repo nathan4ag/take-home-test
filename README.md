@@ -9,14 +9,15 @@ SQL for creating your database tables
 Insert statements to populate your tables with
 
 ## Objective
-In an object-oriented language of your choosing, create an api that will accept a US state abbreviation as input and return information regarding COVID.
+In an object-oriented language of your choosing, create an api that will accept a US state abbreviation as input and return information regarding jobs.
 The GET request should return the following stats.
 
-* **Stage name**
-* **Total cases**
-* **Total number of deaths**
-* **Cases w/in the last 7 days**
-* **Total cases per 100k** (i.e. NC has a population of 10,500,000 and roughly 564,000 cases of COVID. That would be ~5,371/100k cases.
+* **State name**
+* **Total number of jobs**
+* **Total number of jobs open**
+* **Total number of jobs filled**
+* **Number of new jobs w/in the last 7 days**
+* **Total jobs available per 100k** (i.e. NC has a population of 10,500,000 and roughly 564,000 cases of COVID. That would be ~5,371/100k cases.
 * **Total nubmer of deaths per 100k** (similar to above)
 
 Additionally there should be a POST request that accepts input for new cases.
