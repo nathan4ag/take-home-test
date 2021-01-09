@@ -1,1 +1,0 @@
-docker run -p 3306:3306 -p 33060:33060 --name=mysql57 -e MYSQL_ROOT_PASSWORD=secret -e MYSQL_PASSWORD=secret -e MYSQL_USER=admin -e MYSQL_DATABASE=VotingInformation -d mysql/mysql-server:5.7
