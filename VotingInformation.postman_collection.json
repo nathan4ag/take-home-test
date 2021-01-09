@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "037ab55c-fc33-492a-93b8-070cc096647b",
+		"name": "VotingInformation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetStateInformation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/application/state/tx",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"application",
+						"state",
+						"tx"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddVote",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"randomNumber\", _.random(100000000, 999999999));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"stateId\": 1,\n    \"earlyVote\": true,\n    \"voteType\": \"In-Person\",\n    \"validVote\": true,\n    \"SSN\": {{randomNumber}}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/application/state/nc/AddVote",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"application",
+						"state",
+						"nc",
+						"AddVote"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateVoteValidity",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"validVote\": true,\n    \"SSN\": 533457706\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/application/updateVoteValidity/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"application",
+						"updateVoteValidity",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

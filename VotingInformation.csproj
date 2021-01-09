@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="MySqlClient" Version="5.4.2" />
+    <!-- <PackageReference Include="MySqlConnector" Version="1.2.1" /> -->
+  </ItemGroup>
+
+
+</Project>
